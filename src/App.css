@@ -1,0 +1,53 @@
+.bg-images {
+  background-image: url("./assets/StatitsticCard.png");
+  background-repeat: no-repeat;
+}
+
+.ql-container.ql-snow {
+  border: 1px solid #fde047 !important;
+  border-radius: 10px !important;
+}
+
+.ql-toolbar.ql-snow {
+  border: none !important;
+  display: flex !important;
+  justify-content: end;
+}
+
+.bg-image-clip {
+  background-image: url("./assets/clipard.svg");
+  background-repeat: no-repeat;
+  
+
+}
+.rich-text-container {
+  all: unset; /* Reset all inherited styles */
+}
+
+.page_not_found{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.loader {
+  width: 20px;
+  height: 20px;
+  border: 5px solid #FFF;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+  }
+
+  @keyframes rotation {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+  } 
