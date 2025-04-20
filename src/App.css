@@ -4,7 +4,7 @@
 }
 
 .ql-container.ql-snow {
-  border: 1px solid #fde047 !important;
+  border: 1px solid rgba(34, 34, 34, 0.2) !important;
   border-radius: 10px !important;
 }
 
@@ -12,6 +12,13 @@
   border: none !important;
   display: flex !important;
   justify-content: end;
+}
+
+.background_color{
+  background-color: rgba(201, 160, 56, 1);
+}
+.box-shadow{
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 
 .bg-image-clip {
