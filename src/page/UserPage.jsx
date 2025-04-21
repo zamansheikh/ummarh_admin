@@ -19,13 +19,13 @@ export default function UserPage() {
 			const response = await axiosInstance.get('/auth/all-users/');
 
 			if (response.status === 200) {
-				console.log('✅ Chat List Fetched 33:', response.data);
+				console.log('✅ user List Fetched 33:', response.data);
 				setData(response.data);
 			} else {
-				console.error('❌ Error fetching chat list:', response.data.error);
+				console.error('❌ Error fetching user list:', response.data.error);
 			}
 		} catch (error) {
-			console.error('❌ Error fetching chat list:', error.message);
+			console.error('❌ Error fetching user list:', error.message);
 		}
 	};
 
@@ -44,6 +44,22 @@ export default function UserPage() {
 	const filteredUsers = users?.filter((user) =>
 		user.name.toLowerCase().includes(search.toLowerCase())
 	);
+
+	const handleDelete = async (id) => {
+		try {
+			const confirmation = window.confirm('Are you Sure delete this user');
+			if (!confirmation) {
+				return;
+			}
+			const response = await axiosInstance.delete(`/auth/delete-users/${id}/`);
+			if (response.status === 204) {
+				alert('User Deleted Sucessfully');
+				fetchChats();
+			}
+		} catch (error) {
+			console.error('Error deleting User:', error);
+		}
+	};
 
 	return (
 		<Sidebar>
@@ -154,7 +170,10 @@ export default function UserPage() {
 											</span>
 										</td>
 										<td className="p-2">
-											<RiDeleteBin6Line size={18} />
+											<RiDeleteBin6Line
+												size={18}
+												onClick={() => handleDelete(user.user.id)}
+											/>
 										</td>
 									</tr>
 								))}
@@ -185,7 +204,10 @@ export default function UserPage() {
 										<td className="p-2">{user.address}</td>
 
 										<td className="p-2">
-											<RiDeleteBin6Line size={18} />
+											<RiDeleteBin6Line
+												size={18}
+												onClick={() => handleDelete(user.user.id)}
+											/>
 										</td>
 									</tr>
 								))}

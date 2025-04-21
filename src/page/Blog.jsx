@@ -155,7 +155,7 @@ export default function Blog() {
 
 	return (
 		<Sidebar title={'Blog'}>
-			<div className="pr-3">
+			<div className="px-3">
 				{/* Header */}
 				<div className="flex justify-start items-center gap-3 mb-4 border-b">
 					<button
@@ -180,7 +180,7 @@ export default function Blog() {
 				<div className="w-full flex flex-col justify-center items-center">
 					{/* User Table */}
 					{activeTab === 'upload' ? (
-						<div className="flex flex-col gap-5 px-4 w-[60vw]">
+						<div className="flex flex-col gap-5 px-4 md:w-[60vw] w-[80vw]">
 							<div className="flex gap-5">
 								<select
 									onChange={(e) => setSelected(e.target.value)}
@@ -241,7 +241,7 @@ export default function Blog() {
 									onChange={setText}
 									theme="snow"
 									modules={modules} // Enable toolbar with image upload
-									className="text-sm text-gray-800 h-[40vh]"
+									className="text-sm w-full text-gray-800 md:h-[40vh] h-[300px]"
 									placeholder="Write your description"
 								/>
 							</div>

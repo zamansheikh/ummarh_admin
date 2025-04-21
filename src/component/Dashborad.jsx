@@ -163,7 +163,7 @@ const Dashboard = ({ data, barChartData }) => {
 			{/* Charts Section */}
 			<div className="flex  gap-4 mb-8">
 				{/* Bar Chart */}
-				<div className="bg-white p-4 rounded-lg shadow-md border  w-[70%]">
+				<div className="bg-white p-4 rounded-lg shadow-md border w-full  md:w-[70%]">
 					<div className="flex justify-between items-center mb-4">
 						<div>
 							<h2 className="text-lg font-bold">Monthly Revenue</h2>
