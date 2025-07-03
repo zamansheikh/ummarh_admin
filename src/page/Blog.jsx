@@ -235,7 +235,7 @@ export default function Blog() {
 							</div>
 
 							{/* Description Editor */}
-							<div className="w-full bg-white rounded-lg h-[40vh]">
+							<div className="w-full bg-white rounded-lg ">
 								<ReactQuill
 									value={text}
 									onChange={setText}
@@ -247,10 +247,10 @@ export default function Blog() {
 							</div>
 
 							{/* Save Button */}
-							<div className="mt-12 flex items-end justify-end mr-3">
+							<div className="mt-12 md:flex items-end justify-end mr-3 absolute md:w-auto  bottom-10 w-full">
 								<button
 									onClick={saveBlog}
-									className="px-10 rounded-md py-2 bg-[#C9A038]">
+									className="px-10 rounded-md py-2 bg-[#C9A038] ">
 									Save
 								</button>
 							</div>

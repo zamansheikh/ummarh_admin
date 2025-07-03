@@ -354,7 +354,7 @@ const Sidebar = ({ children, title }) => {
 				</div>
 			</aside>
 
-			<div className="flex-1 min-h-[90vh] h-auto sm:ml-64 mt-14 overflow-auto py-10 ">
+			<div className="flex-1 min-h-[80vh] h-auto sm:ml-64 mt-14 overflow-auto py-10 ">
 				{children}
 			</div>
 		</div>
