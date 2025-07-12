@@ -12,20 +12,6 @@ import {
 } from "recharts";
 import axiosInstance from "./axiosInstance";
 
-// const data = [
-//   { name: "Jan", value: 10 },
-//   { name: "Feb", value: 20 },
-//   { name: "Mar", value: 15 },
-//   { name: "Apr", value: 30 },
-//   { name: "May", value: 25 },
-//   { name: "Jun", value: 40 },
-//   { name: "Jul", value: 35 },
-//   { name: "Aug", value: 60 },
-//   { name: "Sep", value: 55 },
-//   { name: "Oct", value: 80 },
-//   { name: "Nov", value: 75 },
-//   { name: "Dec", value: 0 },
-// ];
 
 const GradientLineChart = ({currentYear}) => {
   const [lineChartData, setLineChartData] = useState([]);
